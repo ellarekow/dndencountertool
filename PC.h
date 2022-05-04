@@ -7,6 +7,6 @@
 class PC : public Character
 {
 public:
-    NPC target;
+    // NPC target;
 };
 #endif // __PC_H__

@@ -14,11 +14,11 @@ bool NPC::hitcheck(int hit)
     return hit >= AC;
 }
 
-int NPC::genDamage(PC target)
-{  
-    //choose ability
-
-}
+// int NPC::genDamage(PC *target)
+// {
+//     // choose ability
+//     return target->HP;
+// }
 
 void NPC::hit(int damage)
 {

@@ -3,11 +3,13 @@
 
 #include "encounter.h"
 #include "character.h"
+#include "PC.h"
+#include "NPC.h"
+
 #include <vector>
 
 using namespace std;
 
-
-void io_gen_party();
+vector<Character *> io_gen_party();
 
 #endif // __IO_H__

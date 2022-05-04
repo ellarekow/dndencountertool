@@ -10,7 +10,7 @@ class NPC : public Character
 public:
     bool isFriendly;
     bool hitcheck(int hit);
-    int genDamage(PC target);
+    // int genDamage(PC *target);
     void hit(int damage);
     NPC(string nm, int armclass, int health);
 };
