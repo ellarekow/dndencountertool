@@ -10,6 +10,7 @@
 
 using namespace std;
 
+void init_io();
 vector<Character *> io_gen_party();
 
 #endif // __IO_H__

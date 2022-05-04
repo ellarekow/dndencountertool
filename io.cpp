@@ -1,11 +1,15 @@
 #include "io.h"
 #include <ncurses.h>
 
-vector<Character *> io_gen_party()
+void init_io()
 {
     initscr();
     raw();
     noecho();
+}
+
+vector<Character *> io_gen_party()
+{
 
     clear();
     mvprintw(0, 0, "how many in the party?");
@@ -21,10 +25,15 @@ vector<Character *> io_gen_party()
 
     for (int i = 0; i < partySize; i++)
     {
-        clear();
-        mvprintw(0, 0, "enter character %d information", i + 1);
-        refresh();
-        getch();
+        int choice = 1;
+        do
+        {
+            clear();
+            mvprintw(0, 0, "what type of character would you like to add?");
+            refresh();
+            input = getch();
+
+        } while (choice);
     }
 
     return party;

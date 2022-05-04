@@ -9,6 +9,7 @@ vector<Character> party;
 
 int main()
 {
+    init_io();
     io_gen_party();
 
     return 0;
