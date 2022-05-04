@@ -11,6 +11,7 @@ int main()
 {
     init_io();
     io_gen_party();
+    io_reset_terminal();
 
     return 0;
 }

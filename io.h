@@ -7,10 +7,12 @@
 #include "NPC.h"
 
 #include <vector>
+#include <string>
 
 using namespace std;
 
 void init_io();
 vector<Character *> io_gen_party();
+void io_reset_terminal();
 
 #endif // __IO_H__
