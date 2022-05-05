@@ -75,17 +75,16 @@ vector<Character *> io_gen_party()
         echo();
         clear();
         mvprintw(0, 0, "P A R T Y  C R E A T I O N");
-        mvprintw(2, 0, "What is your characters name?");
+        mvprintw(2, 0, "What is your characters name? \n");
         refresh();
         scanw("%s", tempName);
         string name(tempName);
-        mvprintw(2, 25, "%s", name.c_str());
 
-        mvprintw(3, 0, "What is their current HP?");
+        mvprintw(3, 0, "What is their current HP? \n");
         refresh();
         scanw("%d", &hp);
 
-        mvprintw(4, 0, "What is their AC?");
+        mvprintw(4, 0, "What is their AC? \n");
         refresh();
         scanw("%d", &ac);
 
@@ -101,12 +100,14 @@ vector<Character *> io_gen_party()
     clear();
 
     mvprintw(0, 0, "party");
+    int place = 0;
     for (unsigned i = 0; i < party.size(); i++)
     {
-        mvprintw(i, 12, ", %s", party.at(i)->name.c_str());
-        refresh();
+        mvprintw(place, 12, ", %s", party.at(i)->name.c_str());
+        place++;
     }
 
+    refresh();
     getch();
     noecho();
 
