@@ -9,10 +9,13 @@ class NPC : public Character
 {
 public:
     bool isFriendly;
-    bool hitcheck(int hit);
-    // int genDamage(PC *target);
-    void hit(int damage);
-    NPC(string nm, int armclass, int health);
+    // string getName();
+    // int getTurn();
+    // int getAC();
+    // int getHP();
+    // void hit(int damage);
+    // bool hitcheck(int hit);
+    NPC(string nm, int *armclass, int *health);
 };
 
 #endif // __NPC_H__

@@ -1,5 +1,6 @@
 #include "io.h"
 #include <ncurses.h>
+#include <string>
 #include <bits/stdc++.h>
 
 void init_io()
@@ -70,8 +71,8 @@ vector<Character *> io_gen_party()
             }
         } while (choice);
         char tempName[80];
-        int hp = 0;
-        int ac = 0;
+        int *hp = 0;
+        int *ac = 0;
         echo();
         clear();
         mvprintw(0, 0, "P A R T Y  C R E A T I O N");
@@ -90,6 +91,7 @@ vector<Character *> io_gen_party()
 
         if (pc == true)
         {
+            party.push_back(new PC(name, ac, hp));
         }
         else
         {
@@ -103,7 +105,9 @@ vector<Character *> io_gen_party()
     int place = 0;
     for (unsigned i = 0; i < party.size(); i++)
     {
-        mvprintw(place, 12, ", %s", party.at(i)->name.c_str());
+        Character *member;
+        member = party.at(i);
+        mvprintw(place, 12, "Name: %s, AC: %d, HP: %d", member->getName().c_str(), member->getAC(), member->getHP());
         place++;
     }
 

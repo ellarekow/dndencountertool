@@ -11,7 +11,7 @@ CXXFLAGS = -Wall -Werror -ggdb -funroll-loops -DTERM=$(TERM)
 LDFLAGS = -lncurses
 
 BIN = session
-OBJS = session.o ability.o io.o dice.o encounter.o NPC.o PC.o
+OBJS = session.o ability.o io.o dice.o encounter.o NPC.o PC.o character.o
 
 all: $(BIN) etags
 

@@ -22,6 +22,6 @@ project(main)
 find_package(Curses REQUIRED)
 include_directories(${CURSES_INCLUDE_DIR})
 
-add_executable(main ability.cpp ability.h character.h character.cpp dice.cpp dice.h encounter.cpp encounter.h io.cpp io.h NPC.cpp NPC.h PC.cpp PC.h session.cpp session.h)
+add_executable(main ability.cpp ability.h character.h dice.cpp dice.h encounter.cpp encounter.h io.cpp io.h NPC.cpp NPC.h PC.cpp PC.h session.cpp session.h)
 target_link_libraries(main ncurses)
 target_link_libraries(main tinfo)
