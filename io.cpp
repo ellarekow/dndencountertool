@@ -71,8 +71,8 @@ vector<Character *> io_gen_party()
             }
         } while (choice);
         char tempName[80];
-        int *hp = 0;
-        int *ac = 0;
+        int hp = 0;
+        int ac = 0;
         echo();
         clear();
         mvprintw(0, 0, "P A R T Y  C R E A T I O N");
@@ -121,4 +121,41 @@ vector<Character *> io_gen_party()
 void io_reset_terminal()
 {
     endwin();
+}
+
+vector<Character *> io_encounter_setup(vector<Character *> party)
+{
+    clear();
+    mvprintw(0, 0, "B A T T L E  S E T U P");
+    mvprintw(3, 0, "How many enemies? \n");
+    refresh();
+    int *numEn;
+    scanw("&d", numEn);
+
+    vector<Character *> enemies;
+
+    for (int i = 0; 0 < numEn; i++)
+    {
+        char tempName[80];
+        int *hp = 0;
+        int *ac = 0;
+        echo();
+        clear();
+        mvprintw(2, 0, "What is the enemy's name? \n");
+        refresh();
+        scanw("%s", tempName);
+        string name(tempName);
+
+        mvprintw(3, 0, "What is their current HP? \n");
+        refresh();
+        scanw("%d", &hp);
+
+        mvprintw(4, 0, "What is their AC? \n");
+        refresh();
+        scanw("%d", &ac);
+
+        enemies.push_back(new NPC(name, ac, hp));
+    }
+
+    return enemies;
 }
