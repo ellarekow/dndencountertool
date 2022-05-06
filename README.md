@@ -4,3 +4,6 @@ This tool is used to help automate the Dungeon Master's (DM) process of enounter
 
 (a more indepth guide to encounters can be found here: [d&d guides](https://arcaneeye.com/dm-tools-5e/5e-encounter-building/#:~:text=Like%20a%20Champ-,What%20is%20an%20Encounter%20in%20D%26D%3F,a%20monster%20or%20dangerous%20situation.))
 
+#HOW TO RUN
+
+Program started by running make then running ```./session```
