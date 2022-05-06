@@ -10,16 +10,16 @@ class Character
 {
 public:
     string name;
-    int *turn;
-    int *AC;
-    int *HP;
+    int turn;
+    int AC;
+    int HP;
 
     string getName() const;
-    int *getTurn();
-    int *getAC();
-    int *getHP();
+    int getTurn();
+    int getAC() const;
+    int getHP() const;
     void hit(int damage);
-    bool *hitcheck(int *hit);
+    bool hitcheck(int hit);
 };
 
 #endif // __CHARACTER_H__

@@ -10,8 +10,9 @@ vector<Character> party;
 int main()
 {
     init_io();
-    io_gen_party();
-    io_encounter_setup();
+    vector<Character *> party = io_gen_party();
+    vector<Character *> enemes = io_encounter_setup();
+    io_display_info(party, enemes);
     io_reset_terminal();
 
     return 0;

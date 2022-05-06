@@ -9,7 +9,7 @@
 class PC : public Character
 {
 public:
-    PC(string nm, int *armclass, int *health);
+    PC(string nm, int armclass, int health);
 
     // string getName();
     // int getTurn();

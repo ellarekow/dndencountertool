@@ -14,6 +14,7 @@ using namespace std;
 void init_io();
 vector<Character *> io_gen_party();
 vector<Character *> io_encounter_setup();
+void io_display_info(vector<Character *> party, vector<Character *> enemies);
 void io_reset_terminal();
 
 #endif // __IO_H__

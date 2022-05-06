@@ -15,7 +15,7 @@ public:
     // int getHP();
     // void hit(int damage);
     // bool hitcheck(int hit);
-    NPC(string nm, int *armclass, int *health);
+    NPC(string nm, int armclass, int health);
 };
 
 #endif // __NPC_H__
